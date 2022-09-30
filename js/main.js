@@ -1,5 +1,3 @@
-const moment = require('moment');
-
 const data = {
     "insurances": [{
         "id": 3322,
@@ -141,8 +139,8 @@ const createPags = (array, itensPerPage) => {
 
     for (let i = 1; i <= totalPages; i++) {
         let selected = currentPage + 1
-        let actiavated = (selected === i) ? 'active' : ''
-        pageBar.innerHTML += `<li class="page-item"><button class="page-link ${actiavated}" href="#" onclick="renderTableWFilters(${i - 1})" >${i}</button></li>`
+        let activated = (selected === i) ? 'active' : ''
+        pageBar.innerHTML += `<li class="page-item"><button class="page-link ${activated}" href="#" onclick="renderTableWFilters(${i - 1})" >${i}</button></li>`
     }
 
     pageBar.innerHTML += `<li class="page-item"><button class="page-link" href="#" onclick="renderTableWFilters(${currentPage}, 'next')">Próxima</button></li>`
